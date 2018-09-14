@@ -20,4 +20,15 @@ desc user_triggers;
 SELECT trigger_name FROM user_triggers;
 
 INSERT INTO Emp(nom, num, salaire)
-VALUES ('jean-kevin',  9999, 1789)
+VALUES ('jean-kevin',  9999, 1789);
+
+CREATE OR REPLACE TRIGGER T1
+BEFORE INSERT ON Emp
+FOR EACH ROW
+BEGIN
+  raise_application_error(-20099, 'Nop.');
+END;
+/
+
+INSERT INTO Emp(nom, num, salaire)
+VALUES ('jean-kevin',  9999, 1789);
