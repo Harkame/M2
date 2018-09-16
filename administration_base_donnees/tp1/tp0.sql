@@ -5,15 +5,15 @@ start ScriptCreation.sql
 SET serveroutput ON size 30000;
 
 CREATE OR REPLACE TRIGGER T1
-BEFORE INSERT OR DELETE ON Emp
-FOR EACH ROW
-BEGIN
-  dbms_output.put_line('Yolo.');
-END;
-/
+  BEFORE INSERT OR DELETE ON emp
+  FOR EACH ROW
+  BEGIN
+    dbms_output.put_line('Yolo.');
+  END;
+  /
 
 SELECT *
-FROM Emp;
+FROM emp;
 
 desc user_triggers;
 
@@ -21,18 +21,18 @@ desc user_triggers;
 
 SELECT trigger_name FROM user_triggers;
 
-INSERT INTO Emp(nom, num, salaire)
+INSERT INTO emp(nom, num, salaire)
 VALUES ('jean-kevin',  9999, 1789);
 
 CREATE OR REPLACE TRIGGER T1
-BEFORE INSERT ON Emp
-FOR EACH ROW
-BEGIN
-  raise_application_error(-20099, 'Nop.');
-END;
-/
+  BEFORE INSERT ON emp
+  FOR EACH ROW
+  BEGIN
+    raise_application_error(-20099, 'Nop.');
+  END;
+  /
 
-INSERT INTO Emp(nom, num, salaire)
+INSERT INTO emp(nom, num, salaire)
 VALUES ('jean-kevin',  9999, 1789);
 
 SELECT text
@@ -40,36 +40,36 @@ FROM user_source
 WHERE name = 'T1';
 
 CREATE OR REPLACE TRIGGER T1
-BEFORE INSERT OR DELETE ON Emp
-FOR EACH ROW
-BEGIN
-  dbms_output.put_line('GG : '||:new.num);
-END;
-/
+  BEFORE INSERT OR DELETE ON emp
+  FOR EACH ROW
+  BEGIN
+    dbms_output.put_line('GG : '||:new.num);
+  END;
+  /
 
-INSERT INTO Emp(nom, num, salaire)
+INSERT INTO emp(nom, num, salaire)
 VALUES ('jean-kevin',  9999, 1789);
 
 CREATE OR REPLACE TRIGGER T1
-BEFORE INSERT OR DELETE OR UPDATE ON Emp
+BEFORE INSERT OR DELETE OR UPDATE ON emp
 FOR EACH ROW
 BEGIN
-  if inserting then
+  IF INSERTING then
     dbms_output.put_line('ADD : ' ||:new.num);
-  elsif deleting then
+  ELSIF DELETING then
     dbms_output.put_line('DELETE : ' ||:old.num);
-  elsif updating then
+  ELSIF UPDATING then
     dbms_output.put_line('UPDATE : '||:new.num||' -> ' ||:new.num);
-  END if;
+  END IF;
 END;
 /
 
-INSERT INTO Emp(nom, num, salaire)
+INSERT INTO emp(nom, num, salaire)
 VALUES ('jean-kevin',  9999, 1789);
 
-DELETE FROM Emp
+DELETE FROM emp
 WHERE nom = 'jean-kevin';
 
-UPDATE Emp
+UPDATE emp
 SET num = 9998
 WHERE nom = 'jean-kevin';
