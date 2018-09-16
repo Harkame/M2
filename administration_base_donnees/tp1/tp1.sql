@@ -27,7 +27,7 @@ ADD CONSTRAINT emp_fkl FOREIGN KEY (n_dept) references dept(n_dept) on delete ca
 --ALTER TABLE emp
 --WHERE table_name IN ('emp', 'dept');
 
-1)
+-- 1
 
 CREATE OR REPLACE TRIGGER salary_positive
   BEFORE INSERT OR UPDATE OF salaire ON emp
@@ -64,6 +64,8 @@ BEGIN
 END;
 /
 
+-- 2
+
 CREATE OR REPLACE TRIGGER salary_smic
   BEFORE INSERT OR UPDATE OF salaire ON emp
   FOR EACH ROW
@@ -86,9 +88,7 @@ CREATE OR REPLACE TRIGGER salary_smic
 
 INSERT INTO emp VALUES('Dark-Sasuke',21831,'administratIF', 16712,'10-SEP-08', 500,NULL, 10);
 
-Vous reprendrez l’´ecriture du trigger ouvrable. Vous d´eﬁnirez une proc´edure JoursEtHeuresOuvrables sans argument qui v´eriﬁe que
-la date du jour n’est pas un samedi ni un dimanche et qui renvoie un message d’erreur autrement. Vous red´eﬁnirez le trigger ouvrable qui fera appel
-a cette proc´edure, dans le contexte de la table Emp. Vous en testerez les eﬀets.
+-- 3
 
 CREATE OR REPLACE PROCEDURE JoursEtHeuresOuvrables IS
   current_day NUMBER;
@@ -112,7 +112,7 @@ CREATE OR REPLACE TRIGGER trigger_available_day
 
 INSERT INTO emp VALUES('Dark-Sasuke',21831,'administratIF', 16712,'10-SEP-08', 500,NULL, 10);
 
--- 4)
+-- 4
 
 DROP TABLE historique;
 
@@ -149,7 +149,7 @@ DELETE FROM emp WHERE num = 6666;
 SELECT *
 FROM historique;
 
--- 5)
+-- 5
 
 CREATE OR REPLACE TRIGGER dept_cascade
   BEFORE DELETE OR UPDATE OF n_dept ON Dept
