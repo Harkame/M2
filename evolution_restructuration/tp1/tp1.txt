@@ -6,6 +6,8 @@ Consigne bonus :
 	- Ripples : Impacte d'une modification, quesque l'analyse d'impacte, 
 definition.
 
+https://doc.rero.ch/record/20715/files/2010INFO005.pdf
+
 Plan :
 	- Definition, etcn analyse d'impacte (change impact analyse)
 	- L'outils avec les fonctionnalités
