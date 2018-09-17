@@ -1,0 +1,22 @@
+Consigne bonus :
+	TUTO utilisation
+	- CodeCity : Tester sur un projet (tuto, resultats, etc)
+		- Lister les fonctionnalités
+		- Montrer les tests
+	- Ripples : Impacte d'une modification, quesque l'analyse d'impacte, 
+definition.
+
+Plan :
+	- Definition, etcn analyse d'impacte (change impact analyse)
+	- L'outils avec les fonctionnalités
+	- Cas d'études
+
+Exercice 1 :
+
+- Etapes :
+	- Diagramme UML pour extraire l'architecture du programme
+	
+
+Exercice 2 :
+
+
