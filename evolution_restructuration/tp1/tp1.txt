@@ -8,6 +8,8 @@ definition.
 
 https://doc.rero.ch/record/20715/files/2010INFO005.pdf
 
+https://github.com/visminer/repositoryminer/wiki/Available-Code-Smells
+
 Plan :
 	- Definition, etcn analyse d'impacte (change impact analyse)
 	- L'outils avec les fonctionnalités
