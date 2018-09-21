@@ -89,3 +89,52 @@ BEGIN
   DepartmentWorker(department_id, listWorker);
   dbms_output.put_line('Workers :'||department_id||' : '||listWorker);
 END;
+
+CREATE OR REPLACE PROCEDURE DepartmentWorker(department_id IN integer, department_cost OUT INTEGER) IS
+  BEGIN
+    SELECT SUM(SALAIRE) INTO department_cost FROM emp WHERE n_dept = department_id;
+
+    EXCEPTION
+      WHEN others THEN department_cost := 'Error';
+  END;
+
+CREATE OR REPLACE PROCEDURE foo(department_id IN INTEGER) IS
+cost_department INTEGER;
+BEGIN
+  DepartmentWorker(department_id, cost_department);
+  dbms_output.put_line('Cost ('||department_id||') : '||cost_department);
+END;
+
+CREATE OR REPLACE package Supervision AS
+FUNCTION tauxUtilisation return float;
+PROCEDURE infosUsagers (nomu out VARCHAR2, nombreTables out INTEGER);
+END Supervision;
+/
+
+CREATE OR REPLACE package body Supervision AS
+  function tauxUtilisation return float IS
+  nbreusagers INTEGER;
+  nbreConnectes INTEGER;
+  BEGIN
+    SELECT count(DISTINCT username) INTO nbreConnectes from v$session WHERE type = 'USER';
+    SELECT count(DISTINCT username) INTO nbreusagers from dba_users;
+
+    RETURN (nbreConnectes/nbreusagers) * 100;
+  END;
+
+  PROCEDURE infosUsagers (nomu out VARCHAR2, nombreTables OUT INTEGER) IS
+  BEGIN
+    SELECT DISTINCT username into nomUsager FROM v$session WHERE type ='USER';
+    SELECT count(tablename) INTO nombreTables FROM dba_tables WHERE username = numUsager;
+  END;
+END Supervision;
+/
+
+SELECT Supervision.tauxUtilisation FROM dual;
+
+DECLARE
+nomUsager VARCHAR2(20);
+nombreTables INTEGER;
+BEGIN
+
+END;
