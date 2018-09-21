@@ -91,14 +91,15 @@ INSERT INTO emp VALUES('Dark-Sasuke',21831,'administratIF', 16712,'10-SEP-08', 5
 -- 3
 
 CREATE OR REPLACE PROCEDURE JoursEtHeuresOuvrables IS
-  current_day NUMBER;
+  --current_day NUMBER;
   BEGIN
-    SELECT to_char (CURRENT_DATE, 'D') into current_day FROM dual;
-
-    IF current_day = 6 OR current_day = 7 THEN
+    --SELECT to_char (CURRENT_DATE, 'D') into current_day FROM dual;
+    --IF current_day = 6 OR current_day = 7 THEN
+    IF trim(to_char(sysdate, 'DAY')) = 'FRIDAY' THEN
   	 raise_application_error(-20000, 'Closed');
     END IF;
   END;
+/
 
 
 CREATE OR REPLACE TRIGGER trigger_available_day
@@ -110,7 +111,8 @@ CREATE OR REPLACE TRIGGER trigger_available_day
   END;
 /
 
-INSERT INTO emp VALUES('Dark-Sasuke',21831,'administratIF', 16712,'10-SEP-08', 500,NULL, 10);
+INSERT INTO emp VALUES('Dark-Sas',21831,'administratIF', 16712,'21-SEP-08', 500,NULL, 10);
+
 
 -- 4
 
@@ -158,6 +160,7 @@ CREATE OR REPLACE TRIGGER dept_cascade
   BEGIN
     IF deleting THEN
       DELETE FROM emp WHERE n_dept = :old.n_dept;
+      --UPDATE emp SET n_dept = :new.n_dept WHERE n_dept = NULL;
     ELSIF UPDATING THEN
       UPDATE emp SET n_dept = :new.n_dept WHERE n_dept = :old.n_dept;
     END IF;
@@ -172,3 +175,16 @@ ALTER TABLE emp DISABLE CONSTRAINT emp_fkl;
 DELETE FROM dept WHERE n_dept = 11;
 
 ROLLBACK;
+
+-- 4 ) TODO
+
+-- 5) --
+CREATE OR REPLACE PROCEDURE eraseDataBase IS
+  CURSOR c IS SELECT object_name FROM user_procedures WHERE object_type='FUNCTION';
+  BEGIN
+  FOR c_l IN c
+  LOOP
+  dbms_output.put_line('Function ' || c_l.object_name);
+  execute immediate 'drop function ' || c_t.object_name;
+
+  END;
