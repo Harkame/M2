@@ -1,0 +1,14 @@
+example
+  |myStack|
+
+  myStack := MyStack new: 9.
+
+  myStack printOn: Transcript.
+
+  myStack push: 9.
+  myStack push: 42.
+
+  myStack printOn: Transcript.
+
+  myStack pop.
+  myStack printOn: Transcript.
