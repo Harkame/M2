@@ -5,7 +5,7 @@
  */
 public abstract class Main {
 	/*
-	 * Probleme : Les attributs sont public, on veux les rendres private mais pour y acceder quand même
+	 * Probleme : Les attributs sont public, on veux les rendres private mais pour y acceder quand meme
 	 * 
 	 * Sujet : Encapsulate	Field
 	 */

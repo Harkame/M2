@@ -6,7 +6,7 @@
 public abstract class Main {
 	/*
 	 * Probleme : On a un enum (Animal) qui contient les differents types d'animaux mais
-	 * les noms sont beaucoup trop generiques. Il faut les modifier pour les rendres plus realiste
+	 * les noms sont beaucoup trop generiques. Il faut les modifier pour les rendres plus realistes
 	 *
 	 * Sujet : Rename enum constants
 	 */
