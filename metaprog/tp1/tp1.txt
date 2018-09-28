@@ -1,14 +1,59 @@
-example
-  |myStack|
+|myStack|
 
-  myStack := MyStack new: 9.
+myStack := MyStack new: 9.
 
-  myStack printOn: Transcript.
+myStack printOn: Transcript.
 
-  myStack push: 9.
-  myStack push: 42.
+myStack push: 9.
+myStack push: 42.
 
-  myStack printOn: Transcript.
+myStack printOn: Transcript.
 
-  myStack pop.
-  myStack printOn: Transcript.
+myStack pop.
+myStack printOn: Transcript.
+
+---
+
+|myList|
+
+myList class.
+
+myList isEmpty.
+
+myList := UndefinedObject createMyList.
+
+myList printOn: Transcript.
+
+myList addElement: 42.
+myList addElement: 98.
+
+myList printOn: Transcript.
+
+myList class.
+
+myList isEmpty.
+
+---
+
+|blockA blockB|
+
+blockA := Counter create.
+blockB := Counter create.
+
+blockA value.
+blockA value.
+blockA value.
+blockA value.
+
+blockB value.
+blockB value.
+
+---
+
+|myStack myInspector|
+
+myStack := MyStack new: 9.
+
+myInspector := MyInspector new.
+
+myInspector inspect: myStack.

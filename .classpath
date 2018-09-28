@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="evolution_restructuration/tp1/src"/>
+	<classpathentry kind="src" path="evolution_restructuration/tp2/TP2EncapsulateField/src"/>
+	<classpathentry kind="src" path="evolution_restructuration/tp2/TP2RenameConstants/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="evolution_restructuration/tp2/TP2RenameConstants/bin"/>
+</classpath>
