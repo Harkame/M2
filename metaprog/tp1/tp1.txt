@@ -50,7 +50,7 @@ blockB value.
 
 ---
 
-|myStack myInspector|
+|myStack myInspector variableNames|
 
 myStack := MyStack new: 9.
 
