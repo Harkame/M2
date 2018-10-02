@@ -1,21 +1,19 @@
 package umlutils;
 
-import java.beans.Visibility;
-
-import org.eclipse.emf.*;
-import org.eclipse.emf.common.util.*;
-import org.eclipse.emf.ecore.*;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMLMapImpl;
-
+//import org.eclipse.uml2.uml.UMLFactory;
+import org.eclipse.uml2.uml.Class;
+import org.eclipse.uml2.uml.Generalization;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Operation;
-//import org.eclipse.uml2.uml.UMLFactory;
-import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Package;
 import org.eclipse.uml2.uml.PackageableElement;
 import org.eclipse.uml2.uml.Parameter;
@@ -46,9 +44,9 @@ public class LoadUML {
 		Model model1 = chargerModele("model/model.uml");
 		//Model umlP = chargerModele("model/packageMove.uml");
 		
-		Package myPackage;
+		Package myPackage = null;
 		
-		Class myClass;
+		Class myClass = null;
 		
 		for (NamedElement namedElement : model1.getMembers())
 			if (namedElement instanceof Package && namedElement.getName().equals("mypackage"))
@@ -58,12 +56,6 @@ public class LoadUML {
 		
 		moveClass(myClass, myPackage);
 		
-		Package myPackage = null;
-
-		Class myClass = null;
-
-
-
 		//moveClass(myClass, myPackage);
 
 		VisibilityKind visibilityKind = VisibilityKind.PRIVATE_LITERAL;
@@ -87,8 +79,6 @@ public class LoadUML {
 				getter.setVisibility(VisibilityKind.PUBLIC_LITERAL);
 				getter.setName("get" + property.getName());
 				
-				getter.setClass_(myClass);
-				
 				Operation setter = factory.createOperation();
 				
 				Parameter paramIn = factory.createParameter();
@@ -107,12 +97,58 @@ public class LoadUML {
 			}
 		}
 		
-		sauverModele("model/changeVisibility.uml", umlP);
+		sauverModele("model/changeVisibility.uml", model1);
+
+	}
+	
+	public static Operation createOperation(Property property, String methodName, VisibilityKind visibilityKind, ParameterDirectionKind parameterDirectionKind)
+	{
+		Operation operation = factory.createOperation();
+		
+		Operation getter = factory.createOperation();
+		
+		Parameter paramReturn = factory.createParameter();
+		
+		paramReturn.setType(property.getType());
+		paramReturn.setLower(property.getLower());
+		paramReturn.setUpper(property.getUpper());
+		paramReturn.setDirection(ParameterDirectionKind.RETURN_LITERAL);
+		
+		getter.getOwnedParameters().add(paramReturn);
+		getter.setVisibility(VisibilityKind.PUBLIC_LITERAL);
+		getter.setName("get" + property.getName());
+		
+		return operation;
+	}
+	
+	public static void remountMethod(String className, String superClassName, String methodName)
+	{
+		Operation operation = null;
+		
+		Package myPackage = null;
+		
+		Class myClass = null;
+		
+		Model model1 = chargerModele("model/model.uml");
+		
+		for (NamedElement namedElement : model1.getMembers())
+			if (namedElement instanceof Package && namedElement.getName().equals("mypackage"))
+				myPackage = (Package) namedElement;
+			else if (namedElement instanceof Class && namedElement.getName().equals("Class1"))
+				myClass = (Class) namedElement;
 		
 	}
 	
-	public static void moveClass(Class c, Package target) {
-		target.getPackagedElements().add(c);
+	public static void remountMethodAux(String className, String superClassName, Operation operation)
+	{
+		if(className.equals(superClassName))
+		{
+			
+		}
+	}
+	
+	public static void moveClass(Class classToMove, Package destinationPackage) {
+		destinationPackage.getPackagedElements().add(classToMove);
 	}	
 	
 	public Class findClassInPackage(String className, Package p)
