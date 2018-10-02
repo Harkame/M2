@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_LX2EQMY_EeikTfTlUGiYtg" name="NewModelName">
+  <packageImport xmi:id="_LX2rUMY_EeikTfTlUGiYtg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Mo6qkMY_EeikTfTlUGiYtg" name="mypackage"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LX2rUcY_EeikTfTlUGiYtg" name="Class1">
+    <ownedAttribute xmi:id="_H54dsMZBEeikTfTlUGiYtg" name="myAttribut"/>
+  </packagedElement>
+</uml:Model>
