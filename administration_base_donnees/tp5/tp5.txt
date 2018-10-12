@@ -1,0 +1,134 @@
+-- 1. Donner les espaces m´emoires exploit´es par utilisateur, tri´es du plus petit consommateur au plus
+grand (dba segments)
+SELECT owner, segment_name, segment_type, extents, bytes
+FROM dba_segments
+WHERE owner = 'ldaviaud';
+
+-- 2. Quel utilisateur consomme l’espace de stockage memoire le plus important (dba segments et
+tablespace users) ?
+SELECT owner, SUM(bytes) AS total
+FROM dba_segments
+GROUP BY owner
+ORDER BY total ASC;
+
+-- 3. Qui possede le plus d’index dans son sch´ema utilisateur (dba segments) ?
+SELECT owner, COUNT(*)
+FROM dba_segments s1
+WHERE SEGMENT_TYPE = 'INDEX'
+HAVING COUNT (*) = (
+  SELECT MAX(COUNT(*))
+  FROM dba_segments s2
+  WHERE SEGMENT_TYPE = 'INDEX'
+  GROUP BY owner
+)
+GROUP BY owner;
+
+-- 4. Qui n’a pas cr´e´e d’objets dans son sch´ema utilisateur depuis plus d’un an (dba objects)
+
+SELECT DISTINCT owner, LAST_DDL_TIME
+FROM dba_objects
+WHERE owner IN (
+  SELECT owner
+  FROM dba_objects
+  WHERE CREATED < SYSDATE - 365
+  GROUP BY owner, LAST_DDL_TIME
+);
+GROUP BY owner;
+
+-- 5. Quels sont les objets et leurs propri´etaires qui n’ont pas connu d’´evolutions depuis plus d’un
+an (dba objects)
+
+SELECT owner, LAST_DDL_TIME, OBJECT_NAME
+FROM dba_objects
+WHERE LAST_DDL_TIME < SYSDATE - 365
+AND owner = 'ldaviaud'
+-- owner : PUBLIC, SYS, SYSMAN
+
+-- 6. Quels sont les usagers qui ´ecrivent respectivement sur le tablespace SYSTEM, SYSAUX et
+UNDOTBS1 (dba segments)
+
+SELECT owner
+FROM dba_segments
+WHERE tablespace_name = 'SYSTEM';
+
+SELECT owner
+FROM dba_segments
+WHERE tablespace_name = 'SYSAUX';
+
+SELECT owner
+FROM dba_segments
+WHERE tablespace_name = 'UNDOTBS1';
+
+-- 7. Quel(s) usager(s) a deux sessions (voire plus ouvertes (v$session
+
+SELECT username
+FROM v$session
+HAVING COUNT (*) >= 2
+GROUP BY username;
+
+-- 8. Quel(s) usager(s) a une session, qui a pos´e des verrous bloquants pour une autre session (v$lock
+et v$session)
+
+SELECT username
+FROM v$session s, v$lock l
+WHERE s.sid = l.sid
+AND block = 1;
+
+-- 9. Quelles sont les requˆetes que j’ai ex´ecut´ees qui sont encore prises en charge au niveau de la
+library cache (v$sql)
+
+SELECT sql_id, substr(sql_text, 1, 40), cpu_time/100000, disk_reads, buffer_gets FROM v$sql_idwhere parsing_schema name = 'IMOUGENOT' ORDER BY 3;
+
+col parsing schema_name 15
+SELECT parsing_schema_name, sql_id, substr(sql_text, 1, 40), cpu_time/100000, disk_readsbuffer, buffer_getsFROM v$sql WHERE parsing_schema_name <> 'SYS'
+
+-- 10. Quelles sont les requˆetes que j’ai ex´ecut´ees plusieurs fois qui sont encore prises en charge au
+niveau de la library cache (v$sql)
+
+SELECT sql_id, substr(sql_text, 1, 20à, executions AS rejoues, cpu_time/10000), disk_reads
+WHERE parsing_schema_name = 'IMOUGENOT' AND executions > 1 ORDER BY 3
+
+
+VARIABLE nom_e varchar2(20)
+exec :nom_e := 'CODD'
+
+SELECT num, fonction FROM emp WHERE nom = :nom_e.
+
+exec :nom_e := 'toto'
+
+SELECT num, fonction FROM emp WHERE nom = :nom_e.
+
+-- 11. Quels sont les objets de la base qui sont invalides et qui peuvent entrainer des points de
+contention au niveau du dictionary cache (dba objects et status)
+
+SELECT object_namùe, owner buffer_gets
+FROM dba_objects
+WHERE status = 'INVALID'
+
+-- 12. Quels sont mes privil`eges utilisateur (user tab privs)
+
+SELECT grantee, grantor, owner, table_name, privilege
+FROM user_tab_privs;
+
+-- 13. Quels sont mes privil`eges syst`emes (user sys privs)
+
+SELECT *
+FROM user_sys_privs;
+
+-- 14. Quels sont les rˆoles qui m’ont ´et´e attribu´es (dba roles et dba sys privs)
+
+SELECT DISTINCT username, granted_role FROM user_role_privs;
+
+-- 15. Quels sont les privil`eges que me donnent ces rˆoles (dba role privs)
+
+-- 16. Quel objet, et de quel utilisateur, utilise le plus de blocs du cache de donn´ees (dba objects,
+
+SELECT objd, count(block), object_name, owner
+FROM v$bh, dba_objects
+WHERE objd = object_id AND owner not in ('SYS', 'SYSMAN', 'XDB')
+GROUP BY objd, object_name?;
+
+v$bh)
+-- 17. Comment savoir si tous les blocs de ma table EMP sont dans le cache de donn´ees (user tables
+et v$bh) (rafraˆıchir les statistiques en analysant la table) ?
+-- 18. Quelle sont mes dix requˆetes r´ecentes les plus coˆuteuses
