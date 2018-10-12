@@ -1,0 +1,5 @@
+Animal new.
+
+Cat new.
+
+Dog new.
