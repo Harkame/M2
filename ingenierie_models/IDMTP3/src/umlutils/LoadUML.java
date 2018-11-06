@@ -41,7 +41,7 @@ public class LoadUML {
 		 * sauverModele("model/changerNom.uml", umlP);
 		 */
 
-		Model model1 = chargerModele("model/model.uml");
+		Model model1 = chargerModele("../TP_State.uml");
 		//Model umlP = chargerModele("model/packageMove.uml");
 		
 		Package myPackage = null;
