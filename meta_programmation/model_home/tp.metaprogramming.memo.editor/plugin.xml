@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated memo -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="tp.metaprogramming.memo.presentation.MemoModelWizardID"
+            name="%_UI_MemoModelWizard_label"
+            class="tp.metaprogramming.memo.presentation.MemoModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MemoModelFile.gif">
+         <description>%_UI_MemoModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated memo -->
+      <editor
+            id="tp.metaprogramming.memo.presentation.MemoEditorID"
+            name="%_UI_MemoEditor_label"
+            icon="icons/full/obj16/MemoModelFile.gif"
+            extensions="memo"
+            class="tp.metaprogramming.memo.presentation.MemoEditor"
+            contributorClass="tp.metaprogramming.memo.presentation.MemoActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

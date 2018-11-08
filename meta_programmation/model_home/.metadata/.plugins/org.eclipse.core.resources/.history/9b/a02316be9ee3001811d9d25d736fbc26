@@ -1,0 +1,11 @@
+package tp.metaprogramming.memo.test;
+
+import tp.metaprogramming.memo.MemoFactory;
+
+public class MemoTest {
+
+	public static void main(String[] args)
+	{
+		World world = MemoFactory.eINSTANCE.createWorld();
+	}
+}

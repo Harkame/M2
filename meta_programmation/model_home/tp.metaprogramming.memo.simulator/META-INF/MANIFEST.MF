@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Simulator
+Bundle-SymbolicName: tp.metaprogramming.memo.simulator;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.emf.ecore;bundle-version="2.14.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.14.0",
+ org.eclipse.core.runtime;bundle-version="3.14.0"
+Automatic-Module-Name: tp.metaprogramming.memo.simulator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: tp.metaprogramming.memo

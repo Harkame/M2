@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: fr.obeo.dsl.designer.ce
+Bundle-SymbolicName: fr.obeo.dsl.designer.ce;singleton:=true
+Built-By: integration
+Require-Bundle: org.eclipse.ui,org.eclipse.ui.intro,org.eclipse.help,o
+ rg.eclipse.core.runtime;bundle-version="3.8.0"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:https://gerrit.obeo.fr:8443/p/obeo/d
+ esigner/designer.git;path="plugins/fr.obeo.dsl.designer.ce";commitId=
+ 5f5c1e4435aafbe5f1957c65794ee431ac1c2293
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 11.1.0.201810210823
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.2.2
+Build-Jdk: 1.8.0_66
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="memo" nsURI="http://www.example.org/memo" nsPrefix="memo">
+  <eClassifiers xsi:type="ecore:EClass" name="Person" eSuperTypes="#//NamedElement">
+    <eOperations name="birthday"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="has" upperBound="-1" eType="#//Automobile"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" eSuperTypes="#//MemoObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MemoObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instances" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"
+        derived="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AutomobileType">
+    <eLiterals name="BMW"/>
+    <eLiterals name="Mercedes" value="1"/>
+    <eLiterals name="Audi" value="2"/>
+    <eLiterals name="Citroen" value="3"/>
+    <eLiterals name="Renault" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Automobile" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//AutomobileType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="World" eSuperTypes="#//MemoObject">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="population" upperBound="-1"
+        eType="#//Person" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="automobile" upperBound="-1"
+        eType="#//Automobile" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

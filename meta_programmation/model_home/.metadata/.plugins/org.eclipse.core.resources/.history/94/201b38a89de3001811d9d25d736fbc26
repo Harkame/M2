@@ -1,0 +1,50 @@
+/**
+ */
+package tp.metaprogramming.memo;
+
+import org.eclipse.emf.ecore.EObject;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Object</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link tp.metaprogramming.memo.MemoObject#getInstances <em>Instances</em>}</li>
+ * </ul>
+ *
+ * @see tp.metaprogramming.memo.MemoPackage#getMemoObject()
+ * @model
+ * @generated
+ */
+public interface MemoObject extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Instances</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Instances</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Instances</em>' attribute.
+	 * @see #setInstances(Object)
+	 * @see tp.metaprogramming.memo.MemoPackage#getMemoObject_Instances()
+	 * @model derived="true"
+	 * @generated
+	 */
+	Object getInstances();
+
+	/**
+	 * Sets the value of the '{@link tp.metaprogramming.memo.MemoObject#getInstances <em>Instances</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Instances</em>' attribute.
+	 * @see #getInstances()
+	 * @generated
+	 */
+	void setInstances(Object value);
+
+} // MemoObject
