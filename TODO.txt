@@ -1,0 +1,24 @@
+Evolution-Restructuration
+	- TP1
+		- JRipples : all
+		- Codecity : explications
+	- TP3
+		- Cleanup
+		- Spoon explication
+	- TP4
+		- ALL
+
+Android
+	- TP1
+		- Onglet recherche
+		- Message : Montre -> Phone
+		- Appearance
+
+	- Cordova
+		- Menu recherche
+		- Link Wear - Phone
+		- Notification (Background service)
+		- Bug geolocation : 0
+
+E-application
+	- Tester les relations (New format)

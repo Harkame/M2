@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_-da7UOHAEei6AtaSUwU3UQ" name="TP_State">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_-lFCgOHAEei6AtaSUwU3UQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_b0x24OHBEei6AtaSUwU3UQ" name="Chicken"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_iC8h8OHEEei6AtaSUwU3UQ" name="Chicken" visibility="private">
+    <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_xcfmMOHBEei6AtaSUwU3UQ" name="StateMachine3">
+      <region xmi:type="uml:Region" xmi:id="_yzspsOHBEei6AtaSUwU3UQ" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_wzsrYOHCEei6AtaSUwU3UQ" source="_R83hIOHCEei6AtaSUwU3UQ" target="_kVDZYOHCEei6AtaSUwU3UQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_Wy4RAOHGEei6AtaSUwU3UQ" name="killedTrigger" event="_WgOawOHGEei6AtaSUwU3UQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_xsCBkOHCEei6AtaSUwU3UQ" source="_9ad0EOHBEei6AtaSUwU3UQ" target="_R83hIOHCEei6AtaSUwU3UQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_KIrPQOHGEei6AtaSUwU3UQ" name="growTrigger" event="_InnsMOHGEei6AtaSUwU3UQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_yqnwwOHCEei6AtaSUwU3UQ" source="_kVDZYOHCEei6AtaSUwU3UQ" target="_lVm3cOHCEei6AtaSUwU3UQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_eUBuQOHGEei6AtaSUwU3UQ" name="cookedTrigger" event="_eLLUQOHGEei6AtaSUwU3UQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_zdpJIOHCEei6AtaSUwU3UQ" source="_lVm3cOHCEei6AtaSUwU3UQ" target="_KYQgMOHCEei6AtaSUwU3UQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_kZLHkOHGEei6AtaSUwU3UQ" name="eatenTrigger" event="_kOp5oOHGEei6AtaSUwU3UQ"/>
+        </transition>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_9ad0EOHBEei6AtaSUwU3UQ" name="begin"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_KYQgMOHCEei6AtaSUwU3UQ" name="end"/>
+        <subvertex xmi:type="uml:State" xmi:id="_R83hIOHCEei6AtaSUwU3UQ" name="Alive"/>
+        <subvertex xmi:type="uml:State" xmi:id="_kVDZYOHCEei6AtaSUwU3UQ" name="Dead"/>
+        <subvertex xmi:type="uml:State" xmi:id="_lVm3cOHCEei6AtaSUwU3UQ" name="Nugget"/>
+      </region>
+    </ownedBehavior>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TnjZ8OHFEei6AtaSUwU3UQ" name="grow"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UB07IOHFEei6AtaSUwU3UQ" name="killed"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_U213kOHFEei6AtaSUwU3UQ" name="cooked"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_VGgrQOHFEei6AtaSUwU3UQ" name="eated"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_InnsMOHGEei6AtaSUwU3UQ" operation="_TnjZ8OHFEei6AtaSUwU3UQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_WgOawOHGEei6AtaSUwU3UQ" name="killedCallEvent" operation="_UB07IOHFEei6AtaSUwU3UQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_eLLUQOHGEei6AtaSUwU3UQ" name="cookedCallEvent" operation="_U213kOHFEei6AtaSUwU3UQ"/>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_kOp5oOHGEei6AtaSUwU3UQ" name="eatedCallEvent" operation="_VGgrQOHFEei6AtaSUwU3UQ"/>
+</uml:Model>

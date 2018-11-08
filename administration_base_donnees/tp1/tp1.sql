@@ -58,9 +58,11 @@ BEGIN
 
   for city IN citys LOOP
     IF :new.salaire < 1000 AND city.n_dept = :new.n_dept then
-      raise_application_error(-20000, 'Nop. Salaire < 1000 sur rennes');
+      raise no_data_found;
     END IF;
   END loop;
+
+
 END;
 /
 
