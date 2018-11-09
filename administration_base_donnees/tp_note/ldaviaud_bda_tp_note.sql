@@ -132,7 +132,7 @@ EXEC :fake_object_type := 'TUTU'
 
 --QUESTION 1
 
-EXEC TpCC.DataTable(:user_name_1, :table_name);
+--EXEC TpCC.DataTable(:user_name_1, :table_name);
 
 --EXCEPTION
 --EXEC TpCC.DataTable(:fake_user_name, :table_name);
@@ -147,7 +147,7 @@ EXEC TpCC.DataTable(:user_name_1, :table_name);
 --EXEC TpCC.DataTableAndIndex(:user_name_1, :fake_table_name);
 
 --QUESTION 3
---EXEC TpCC.CacheBlocks(:user_name_2, :object_type);
+EXEC TpCC.CacheBlocks(:user_name_2, :object_type);
 
 --EXCEPTION
 --EXEC TpCC.CacheBlocks(:fake_user_name, :object_type);
