@@ -1,0 +1,290 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.eclipse.emf.ecore.editor
+Bundle-SymbolicName: org.eclipse.emf.ecore.editor;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.emf
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.6.0,4.0.0)
+ ",org.eclipse.core.resources;bundle-version="[3.6.0,4.0.0)";visibilit
+ y:=reexport,org.eclipse.ui.ide;bundle-version="[3.6.0,4.0.0)";visibil
+ ity:=reexport,org.eclipse.emf.ecore.xmi;bundle-version="[2.15.0,3.0.0
+ )";visibility:=reexport,org.eclipse.emf.ecore.edit;bundle-version="[2
+ .11.0,3.0.0)";visibility:=reexport,org.eclipse.emf.edit.ui;bundle-ver
+ sion="[2.15.0,3.0.0)";visibility:=reexport,org.eclipse.jface.text;bun
+ dle-version="[3.6.0,4.0.0)"
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:https://git.eclipse.org/r/p/emf/org.
+ eclipse.emf.git;path="plugins/org.eclipse.emf.ecore.editor";commitId=
+ c6d5b3bf2ad1176192d6b8084299d5c9d1345046
+Bundle-Vendor: %providerName
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.emf.ecore.action,org.eclipse.emf.ecore.pre
+ sentation
+Bundle-Name: %pluginName
+Bundle-Version: 2.15.0.v20180823-0905
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.emf.ecore.presentation.EcoreEditorPlugin
+ $Implementation
+Created-By: Apache Maven 3.0.5
+Build-Jdk: 1.8.0_162
+
+Name: org/eclipse/emf/ecore/presentation/EcoreModelWizard$1.class
+SHA-256-Digest: DQQaDG1N5YKmFNDiKSnvNYAWCl9Sya9RxwjFeDaxvN0=
+
+Name: about.properties
+SHA-256-Digest: k9Sb2PStGxd3nYASDheWsP58jmWHQXFtcDpCcqR/4Fo=
+
+Name: plugin.xml
+SHA-256-Digest: PStcJBJHd5yWWK3AfCVXeGep94DAcD1O3Ji0NP67/9M=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$15.class
+SHA-256-Digest: x+vh/EcOhdU22m8dsN54Ga9DDBkZjePjRSkSLHO2WNA=
+
+Name: org/eclipse/emf/ecore/presentation/DynamicModelWizard$1.class
+SHA-256-Digest: JgWg9KdifD3v2/aIuPNdPiu4xo/e04L0/7+C67TPnaQ=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditorPlugin.class
+SHA-256-Digest: a8MJ9rXxxd0aeNeRRqkc8Z2h12DIYW/y4YRfV7c6oa0=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Ext
+ endedLoadResourceAction$TargetPlatformPackageDialog.class
+SHA-256-Digest: eB7YpyyyzOgOfTqTA8tDfzNtOF1Y3SOdEV2PM0xiQ60=
+
+Name: org/eclipse/emf/ecore/action/OpenEditorAction.class
+SHA-256-Digest: G8H0I10XryEieXCo+hqMq3+VdobusYmUh7XBOt+qIJU=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$9.class
+SHA-256-Digest: IKvl+bhQpWQIXw5S+ngDP9cd6M+eIf959/fxetluwEE=
+
+Name: icons/full/wizban/NewEcore.gif
+SHA-256-Digest: RrLUdMpg3w8P4DZBfwsIMopRHM9Dx8nWraqhI97p0bw=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreModelWizard.class
+SHA-256-Digest: ShL4FrpBm9vGlOvKsG0RuLMSL98lD1wpRKmnNzVwCOM=
+
+Name: org/eclipse/emf/ecore/action/CreateDynamicInstanceAction.class
+SHA-256-Digest: fjKnKWBmCSeCrt+lFV08jkv/MRNzSWSJdAcBYAZVTQI=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$2$1.class
+SHA-256-Digest: ElHNXKFwW9iyG06ggOZ+4Ghwf8J+EGlVE+BAnjctmT4=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$3.c
+ lass
+SHA-256-Digest: fwylXrdQ6sfX4k0piLhLEuOA/BRvdUc3+e3clAQ9+28=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$6.class
+SHA-256-Digest: 2K12CtS3NXmmHPCf/hvzmGqokJtcfeo2RrYvSOgWmKQ=
+
+Name: org/eclipse/emf/ecore/presentation/package.html
+SHA-256-Digest: 3BTy41Na2JaevU4kn8nBTFDFFM+rYuxcqJETyjf55wU=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Ext
+ endedLoadResourceAction$RegisteredPackageDialog$2.class
+SHA-256-Digest: gL7uRz9kDkOIum6T+zo2/DVdlxI7JyEbjo6i2APpLbE=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$12.class
+SHA-256-Digest: hI7wvKgOG4Q7xunqWLUOR7ujBT0N9cDMbMsVQKbpb0A=
+
+Name: about.ini
+SHA-256-Digest: 5I7aDOYtski9BSZ5YaVncF7zRWHm8Q4bwDriYJaThtw=
+
+Name: plugin.properties
+SHA-256-Digest: WqxtOm27GPw79fa+oqqGEONSV+Y8VvmC6Qel/Hym328=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Eco
+ reCreateChildAction$1$1.class
+SHA-256-Digest: V1TqYBxYGXUc13LV2wQUIrQ/401mT8oUt22y4QlAbsc=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreModelWizard$EcoreModelWi
+ zardNewFileCreationPage.class
+SHA-256-Digest: QJP/trQtWsphU2xcw4BUzJNREN+ZC9m82i8+1eSjaU0=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Ref
+ lective.class
+SHA-256-Digest: lVFZcjBTIPk5V2kgJciAU1LmQPq/AXuhMDKv6qVDrnc=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor.cla
+ ss
+SHA-256-Digest: iL+BnZNrfG/dZ4PMVYctpbAfY4hUrexTd3IRKGsds30=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreModelWizard$EcoreModelWi
+ zardInitialObjectCreationPage$1.class
+SHA-256-Digest: b0Oejie+L4oSHHu5PHiUzOG+U+Kzl76M1xR+z2L1SRU=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$16.class
+SHA-256-Digest: 8+iR0T4szibkCj/Hmk3v0LqKCW3z+33IaQZrjW60ecg=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$3.class
+SHA-256-Digest: UIEan+yXaygLDz/zv01qODASFJZcKQedOvmTX5uPKK0=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Ext
+ endedLoadResourceAction$RegisteredPackageDialog.class
+SHA-256-Digest: UYfKoDlRNt+piPKKpJtT7UDfmAKMZfGYhiNnGtD7Ia8=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Eco
+ reCreateChildAction.class
+SHA-256-Digest: FsLSofxcahIF2xPdDiwf6gQBZB08cDW37fUAjBhv/g4=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$7.class
+SHA-256-Digest: xYQSBaigWp7NMcf+Eq0vos6YaTkef0cIvUb8cRa5ras=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreModelWizard$2.class
+SHA-256-Digest: MdTa5OtvjZpRCdjqHxUpSw0VlXrXweBuUOHFeDEymxA=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$1MyContentOutline
+ Page.class
+SHA-256-Digest: kE0Aq3pRmQw6YJgGygU4wdiyrS0Vvt8cHtCZx5of7Zk=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Ext
+ endedLoadResourceAction$ExtendedLoadResourceDialog$3.class
+SHA-256-Digest: 5GU7KY6f+jImNMpg9GnjkKubNmv7FqN2Xp0uk1ePvec=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$13.class
+SHA-256-Digest: O8EWzHwg0lRuzuLFm7sYZ1yNDVfqdf97jvJNc56Ou1Q=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Ext
+ endedLoadResourceAction$TargetPlatformPackageDialog$1.class
+SHA-256-Digest: jV+ceeRKfYIwzDOrXTVhYN3Nh777dVsP0e1aBNABiqU=
+
+Name: META-INF/maven/org.eclipse.emf/org.eclipse.emf.ecore.editor/pom.
+ properties
+SHA-256-Digest: 0SSRVBp9Lzzm6wJlUBld2N/1QxFshjx5XUJifKijAEs=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Ext
+ endedLoadResourceAction$ExtendedLoadResourceDialog.class
+SHA-256-Digest: NR2BJssr2A2QRI6IAooQq3p/ei9t02KTw3jeyKFBdW4=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$4.class
+SHA-256-Digest: U5F/YEJE6KIoZnlg39sCvwhwMTNF/tZyGwgns8zGAcQ=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$5$1.class
+SHA-256-Digest: h9iCK9kJOArhEswpU9wkxToVyUJa3/xBzric2Z2+FwU=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$10.class
+SHA-256-Digest: PkJeRSj5ahd46m+1VYeWAE2LuzjOdnpT3dQzB4eXzfQ=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$XML.class
+SHA-256-Digest: 1Pjs6XaLD2BwMGfPdGbHOtbbB6pbjocHHZ+UMKjfEXg=
+
+Name: about.mappings
+SHA-256-Digest: Oo3g/ULP6U9SMyLZDlwhbXtAFrJaDFfCfNuSthtdY9w=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$2.c
+ lass
+SHA-256-Digest: qQhH1/kaQbAdfQTEO/IALgEFATeeITIICEOjyKM8Bks=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$EOb
+ jectProvider.class
+SHA-256-Digest: Mcp9Q2cuATQ2frFSe6dQvGk3qNZOROmFNPBb1fmnKYs=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreModelWizard$EcoreModelWi
+ zardInitialObjectCreationPage.class
+SHA-256-Digest: iefxCY8DFG/cCtN3nEPEDnD0MWkhK+euniJjFok2epU=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$1.class
+SHA-256-Digest: V8cBnJZznZQ4ogcD2Qqh32ci4K5LsBj/D8cH2y8dgfA=
+
+Name: org/eclipse/emf/ecore/presentation/DynamicModelWizard$DynamicMod
+ elWizardNewFileCreationPage.class
+SHA-256-Digest: 92HVNFEWBD94ZvTMEsYnY0e6fmsLR7U/mFFyJ5YOMNY=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Ext
+ endedLoadResourceAction$ExtendedLoadResourceDialog$2.class
+SHA-256-Digest: E3Bufr7ZFbcB6mYoNMQ9N7yOXuZM1KjzS7OQM1YVh1o=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$3$1ResourceDeltaV
+ isitor.class
+SHA-256-Digest: 5v9Aj0DF+5dQ+1uSRp/yydE14EnInBnybqVUYFVRfS4=
+
+Name: icons/full/ctool16/NewEcore.gif
+SHA-256-Digest: o0OZj7OlqTkFDDl/J6C8//WdHWLD3rQUOnI1CJDRynI=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$8.class
+SHA-256-Digest: Dw7YvQsPRqeHAKMkiQOhTxMAeOdi8kJzRd4BNnU0epM=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$3$1.class
+SHA-256-Digest: F4lWc4eqbaDZOX/fq6BEDgGkemOxneFUF2RB6T3cq7M=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$14.class
+SHA-256-Digest: Y9ws0mFwpnG5NECOF2NL45cMjdJlE2LkMneI2UNZk1M=
+
+Name: modeling32.png
+SHA-256-Digest: saSrfvJ79Uzl2BFpCbuVBho1UTuf14LrjD+wGJG44Ok=
+
+Name: about.html
+SHA-256-Digest: 94hJ6ZOHrZnO+XGpAhKNrMqA4v4X3qzwnfB0x9OL4eQ=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Ext
+ endedLoadResourceAction.class
+SHA-256-Digest: ScTjGpVda0TQya8b8psret+a8PwZygmntzHdpl/1avI=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Eco
+ reCreateSiblingAction$1$1.class
+SHA-256-Digest: NzHnBpueHf9rYN7JlHn/i9bIVLQ92XwWGcTcHTzmlfA=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$1.c
+ lass
+SHA-256-Digest: vXPb+nSHu81Ca9a4kK4jpiF29Qx+bCmuLqo0wEHsX7o=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$5.class
+SHA-256-Digest: /HiTqJIDs8FoxN2eH7lH8wvQyiL5PWY0s+S388BaKs0=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor.class
+SHA-256-Digest: XhGKjCIheyySGyUnbd+7MEzM3UkFTTCdcuFHEkzVtGU=
+
+Name: org/eclipse/emf/ecore/presentation/DynamicModelWizard.class
+SHA-256-Digest: IUpEDX02m9WZGm/b/ez1qiEB3OXLu8SQWPdgMhjU8/w=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Ext
+ endedLoadResourceAction$ExtendedLoadResourceDialog$1.class
+SHA-256-Digest: KZOpwexfVSP2wjrqKGMm/JgLSUeu1u+NsNN08+Gb52Q=
+
+Name: META-INF/maven/org.eclipse.emf/org.eclipse.emf.ecore.editor/pom.
+ xml
+SHA-256-Digest: 6eVVEVNPVV1vxm4qhgNlOoI3+hMUrayjg1H7e5NBehU=
+
+Name: org/eclipse/emf/ecore/presentation/DynamicModelWizard$2.class
+SHA-256-Digest: hY7WT+XMiR5uUppWAPLHeZdE4q9Vm9Ox+ehe19hNMQo=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Eco
+ reCreateChildAction$1.class
+SHA-256-Digest: Id73a0hEzz1yJkgcg+jyTzEl3GPqdoRlVp7Ajp5asRI=
+
+Name: icons/full/obj16/EcoreModelFile.gif
+SHA-256-Digest: Rs8jApesSkmbKX2Tpvdd+veLOnvPwWB/wOU9reKEr5w=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$11.class
+SHA-256-Digest: JH9CCsJHoeTe9TPTwWl3vlXtzTBwv4uLJP0DFAIeNYY=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$ReverseAdapterFac
+ toryContentProvider.class
+SHA-256-Digest: 5XH5LGnhLBqFmmKvNrUKNg6INxIoEzg2QJt3bLdHbiA=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Eco
+ reCreateSiblingAction$1.class
+SHA-256-Digest: T4ddH84ofQuKBP6BFko0P/dsKJ3L0dT5/i/GnLJ3hQg=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$2.class
+SHA-256-Digest: DWf4lCej9HBcOrPIm06R5LPaf3z9QQA07vGrS9lamqY=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Eco
+ reCreateSiblingAction.class
+SHA-256-Digest: 6295+P7d0IMVdF4KKOkXpbhbupdmYSadMYv3pMcjhaI=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditorPlugin$Implementat
+ ion.class
+SHA-256-Digest: L0LPbKPyN4fRgzyvYFCeTLfCLYCBJwjYvzA4mIUlGFE=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$Ext
+ endedLoadResourceAction$RegisteredPackageDialog$1.class
+SHA-256-Digest: rvPrXcYdl4FjK6WIeqnG429j7i/tajlBT0kJiVXrI/I=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreActionBarContributor$4.c
+ lass
+SHA-256-Digest: KOOgBC+N5p8r0Rj43EgRpNE/y9Tb7URVWW9HOGFKuUA=
+
+Name: org/eclipse/emf/ecore/presentation/EcoreEditor$3$2.class
+SHA-256-Digest: qtTshA8naq/UB2XngWNtZTIxjsSbRNR26vnfdEDUCnY=
+

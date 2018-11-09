@@ -1,0 +1,504 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.eclipse.emf.ecore.edit
+Bundle-SymbolicName: org.eclipse.emf.ecore.edit;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.emf
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.6.0,4.0.0)
+ ";resolution:=optional;x-installation:=greedy,org.eclipse.emf.ecore;b
+ undle-version="[2.15.0,3.0.0)";visibility:=reexport,org.eclipse.emf.e
+ dit;bundle-version="[2.14.0,3.0.0)";visibility:=reexport
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:https://git.eclipse.org/r/p/emf/org.
+ eclipse.emf.git;path="plugins/org.eclipse.emf.ecore.edit";commitId=c6
+ d5b3bf2ad1176192d6b8084299d5c9d1345046
+Bundle-Vendor: %providerName
+Import-Package: org.osgi.framework;version="[1.5.0,2.0.0)"
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.emf.ecore.provider,org.eclipse.emf.ecore.p
+ rovider.annotation
+Bundle-Name: %pluginName
+Bundle-Version: 2.11.0.v20180823-0905
+Bundle-ClassPath: .
+Bundle-Localization: plugin
+Bundle-Activator: org.eclipse.emf.ecore.provider.EcoreEditPlugin$Imple
+ mentation$Activator
+Created-By: Apache Maven 3.0.5
+Build-Jdk: 1.8.0_162
+
+Name: icons/full/obj16/EEnum.gif
+SHA-256-Digest: m46/G6iy6awUGWbfnxbBadFjTfOucAVh6qr7gRwrzVc=
+
+Name: icons/full/obj16/EGenericType.gif
+SHA-256-Digest: MJUCwmiqVBAUHijpACT7nz61GQ0a8Kk/Az0ymwFXF14=
+
+Name: plugin.xml
+SHA-256-Digest: n6RzldihuOUdgDSEJlRJd50pu0Ab68wsAWG7pApQV+Q=
+
+Name: icons/full/ctool16/CreateEOperation_eParameters_EParameter.gif
+SHA-256-Digest: TQ7i3QYdV8sOdd4+286Pfdnwni+A8AD5u2nPOYLf9JA=
+
+Name: org/eclipse/emf/ecore/provider/annotation/ExtendedMetaDataAnnota
+ tionItemProviderAdapterFactory$ValuePropertyDescriptorDecorator.class
+SHA-256-Digest: gPV05ToF9cdrI4A25GNiqSvtyFe9KWtCWF60SBIQp5A=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EAnnotationItemProvide
+ rAdapterFactory$Reflective.class
+SHA-256-Digest: BXl1amE+DVX3tQbddWuk8C7i8K6e+zyCCB2hvF3chQQ=
+
+Name: org/eclipse/emf/ecore/provider/EModelElementItemProvider$ItemPro
+ pertyDescriptorWithUniqueChoiceOfValueLabels.class
+SHA-256-Digest: HPuR3UoiN822K3Fvvd4WOwRNq4IGiwXUeQ3loks8qKA=
+
+Name: org/eclipse/emf/ecore/provider/EAnnotationItemProvider$SourcePro
+ pertyDescriptor$1.class
+SHA-256-Digest: 5sKtaD0yRztby+Z3rTp8k2CWurGbjd6yemQhr1rzZyM=
+
+Name: org/eclipse/emf/ecore/provider/EAnnotationItemProvider$Reference
+ sPropertyDescriptor.class
+SHA-256-Digest: s/PeMDB+eiQCelMwZMo14erJ+marmpA3e1+jArNN15w=
+
+Name: icons/full/ctool16/CreateEGenericType_eUpperBound_EGenericType.g
+ if
+SHA-256-Digest: ok270mppOSDrzHAm4UD9nozdV7n7jy2btFMjKaHo6LA=
+
+Name: icons/full/obj16/EClass.gif
+SHA-256-Digest: SJkruQdiYRsaCJX47bNDzQWKMNG0h6MMpTNCZ1v7AQ8=
+
+Name: org/eclipse/emf/ecore/provider/EEnumLiteralItemProvider.class
+SHA-256-Digest: F8BGdCSCqYfQAKDqucgZ2uLuQ7kf/FjiVinQyQISjsI=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EcoreAnnotationItemPro
+ viderAdapterFactory.class
+SHA-256-Digest: qMTvlgJPoLuQkxppO1g4DJfrVqg4l/6un37Z9KoX/wc=
+
+Name: about.ini
+SHA-256-Digest: 5I7aDOYtski9BSZ5YaVncF7zRWHm8Q4bwDriYJaThtw=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EAnnotationItemProvide
+ rAdapterFactory$Registry.class
+SHA-256-Digest: e8B/NgwT3XVWjnZ2RZcCUgA/6BYT4pCSdLvZqVbv6Kg=
+
+Name: org/eclipse/emf/ecore/provider/EStringToStringMapEntryItemProvid
+ er$3.class
+SHA-256-Digest: aKtn7kkC2lLCeObVtTtlHzfwVxhieuu9b+rARErlT4E=
+
+Name: icons/full/obj16/EOccurrenceOneToN.gif
+SHA-256-Digest: Eq4MEySJL43A9mwFi1mwPkddY+yHxM9widHoZae5ytw=
+
+Name: org/eclipse/emf/ecore/provider/EEnumItemProvider.class
+SHA-256-Digest: 2ciM5hLjx4e3lp71i64BDxYZVOiLDP0pQx9xwDqAo94=
+
+Name: org/eclipse/emf/ecore/provider/EClassifierItemProvider$2.class
+SHA-256-Digest: EmagdRP7CskFCooEOoX11hPgLxQztrxtYRz1pkvkrVY=
+
+Name: org/eclipse/emf/ecore/provider/EAnnotationItemProvider.class
+SHA-256-Digest: 9fAYnSTHpnXGifkz0nbooZJ1RImpQ+IJl7SURrOUcpo=
+
+Name: org/eclipse/emf/ecore/provider/EObjectItemProvider.class
+SHA-256-Digest: Dj8m0envcIThD6yZzzIA67Z3nwXYvBGPNwkcnw9dYBI=
+
+Name: icons/full/ctool16/CreateEPackage_eClassifiers_EEnum.gif
+SHA-256-Digest: YaXNO8eD1ZKmXgWdhtq23eAGCArghMwSGn6noRJAwDY=
+
+Name: icons/full/obj16/EOccurrenceNToUnbounded.gif
+SHA-256-Digest: b9+r5CzE6jLaiAKA7C8l75w+wzpUnLZVBOTWxk198HI=
+
+Name: icons/full/ctool16/CreateEClass_eStructuralFeatures_EReference.g
+ if
+SHA-256-Digest: J7svTUiKh9ONLNXOGQAszpnnadzgFNjjPulZxxRYASU=
+
+Name: icons/full/obj16/EOccurrenceZeroToN.gif
+SHA-256-Digest: cws/GtIC3JKjhlDngbmldM8frYIvvBHmbOEhmCTplCQ=
+
+Name: icons/full/ctool16/CreateEClass_eGenericSuperTypes_EGenericType.
+ gif
+SHA-256-Digest: aS29T8bc68jyzpHRg2d+W6MzarQgfuOHfijbZEB7s7c=
+
+Name: icons/full/ctool16/CreateEClass_eStructuralFeatures_EAttribute.g
+ if
+SHA-256-Digest: MKn3eg/Hw9CZVNrTFhYHCl3jcX9MgBrjR/gshqYBohc=
+
+Name: org/eclipse/emf/ecore/provider/annotation/ExtendedMetaDataAnnota
+ tionItemProviderAdapterFactory.class
+SHA-256-Digest: LdZe7wrC9uivYh8hRGHm40KkSZCMqLJspzFF3x8CkY8=
+
+Name: icons/full/obj16/EEnumLiteral.gif
+SHA-256-Digest: q4Dzj2vxp32EFIgcmqrmGN6Q5/4yKs5KBlSIXy5XuWk=
+
+Name: org/eclipse/emf/ecore/provider/EGenericTypeItemProvider$2$1.clas
+ s
+SHA-256-Digest: lfAb5Lya4gPEupDcfmF969EhAhe8m7QoQ7FGunDLShM=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EAnnotationItemProvide
+ rAdapterFactory.class
+SHA-256-Digest: qWOGARFGWgiFRJLsGiU2kYUpYqFiYyfBFK11qq6WKjs=
+
+Name: org/eclipse/emf/ecore/provider/EGenericTypeItemProvider$3.class
+SHA-256-Digest: 4Yr8VM+TvOScpSEAUn7YzJEcq88J1GY5kBITz1PkF20=
+
+Name: org/eclipse/emf/ecore/provider/ENamedElementItemProvider$1.class
+SHA-256-Digest: CiBBOnh11L7z8RAFjovzzDj2UW5J642MH0bGvw/4lC4=
+
+Name: org/eclipse/emf/ecore/provider/ETypedElementItemProvider$Multipl
+ icityComposedImage.class
+SHA-256-Digest: NKgPbPXP2fFzfnX/RWOsn18zDIXw3ct9CbdLjv+uL+o=
+
+Name: icons/full/ctool16/CreateEOperation_eTypeParameters_ETypeParamet
+ er.gif
+SHA-256-Digest: C0oeTW9XN3YGdQvGVx2xqs3iBuZ6IcG8WaJMvsl0QFs=
+
+Name: icons/full/obj16/EOccurrenceZeroToUnbounded.gif
+SHA-256-Digest: 5by/4V3wqfxzd5xb7XGT/ia6nWQqm0DZERNneE8/rR4=
+
+Name: org/eclipse/emf/ecore/provider/EClassifierItemProvider$1.class
+SHA-256-Digest: MdlpVjH8huSYG591FBQdKuOwF1bKT8roonNsoXUbXYk=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EAnnotationItemProvide
+ rAdapterFactory$Registry$Impl.class
+SHA-256-Digest: izGEnWPoUWl3Ww7pdHSk652sCMk21oWTE6XZcWSmFLg=
+
+Name: icons/full/ctool16/CreateEEnum_eLiterals_EEnumLiteral.gif
+SHA-256-Digest: VYgYR+juX03/e8lZlUvarRpOin+HkDTuy1JnpfObSQ8=
+
+Name: icons/full/obj16/EOccurrenceNToM.gif
+SHA-256-Digest: D5bGroYwKFAEUSOQ3Q+b5doNZpWLUyDGgsQfGYboc2E=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EcoreAnnotationItemPro
+ viderAdapterFactory$1.class
+SHA-256-Digest: UY2sqcIXlxsYvtYWxWTv7cGPw0yZghiTdOtiwaV+lfk=
+
+Name: org/eclipse/emf/ecore/provider/EReferenceItemProvider$2.class
+SHA-256-Digest: h+ergUeRrW3nnrhks+eSxxatoyoBeHNIWWCHygOburU=
+
+Name: icons/full/obj16/EGenericException.gif
+SHA-256-Digest: PY8QrKbdNhNlyJfsAk/UkCHmQ5DnrLJVzlCfa9sOrmU=
+
+Name: schema/annotation_item_provider_adapter_factory.exsd
+SHA-256-Digest: E+N7YWzu8S2oWZ88xB7iXCYiCFXAT2Nk5O3lW/Oo8S8=
+
+Name: org/eclipse/emf/ecore/provider/EModelElementItemProvider$ItemPro
+ pertyDescriptorWithUniqueChoiceOfValueLabels$1.class
+SHA-256-Digest: Plv6fyeJw0vxKBaFE5CGFRgy/2dMHfzuiEa+1/2MDtg=
+
+Name: about.mappings
+SHA-256-Digest: Oo3g/ULP6U9SMyLZDlwhbXtAFrJaDFfCfNuSthtdY9w=
+
+Name: org/eclipse/emf/ecore/provider/EParameterItemProvider.class
+SHA-256-Digest: ZsH0jIF5i3jMpiq79IjkCrqJcVDtm5huvVHzMCFOBq8=
+
+Name: icons/full/obj16/EDataType.gif
+SHA-256-Digest: H0NOr6NxfRcT+G3WsCdzeW1WBij6jgSH98ncBYUMMv4=
+
+Name: org/eclipse/emf/ecore/provider/EStringToStringMapEntryItemProvid
+ er$1.class
+SHA-256-Digest: xqN3x1V/Abth1cmzxb1SH2C308+VA0PneM1zC8lJJ/4=
+
+Name: org/eclipse/emf/ecore/provider/EStructuralFeatureItemProvider.cl
+ ass
+SHA-256-Digest: mQP1V04dOOYdsOr97rtQprSuSbWg5ovhHvB6f5mqdTk=
+
+Name: icons/full/obj16/EGenericElementType.gif
+SHA-256-Digest: DheWuMQgzMNjmWcKtROfDXrEHmTT9r2DxedDSD2tF8M=
+
+Name: modeling32.png
+SHA-256-Digest: saSrfvJ79Uzl2BFpCbuVBho1UTuf14LrjD+wGJG44Ok=
+
+Name: org/eclipse/emf/ecore/provider/ETypedElementItemProvider$1.class
+SHA-256-Digest: ytooeyLX9Sd+17mEZnQeeq973JNz5r+cVQTsBIRHTlQ=
+
+Name: icons/full/obj16/EAnnotation.gif
+SHA-256-Digest: IwjwuH48Cj5OitkgABuUxsEFnannADh74CuhMVFfq7g=
+
+Name: org/eclipse/emf/ecore/provider/EPackageItemProvider.class
+SHA-256-Digest: DqihTBoNr+30WxmMF/6iWQ8GhZ1C7rWUfKsWTez+9PI=
+
+Name: org/eclipse/emf/ecore/provider/EcoreEditPlugin.class
+SHA-256-Digest: 1ANG5K5RypQFAteEGXF6kL9TOKgHV5Kof04sXq2qfBg=
+
+Name: org/eclipse/emf/ecore/provider/EReferenceItemProvider$1.class
+SHA-256-Digest: Nqtc1ieR5ab3QwCvLt1wLj47sKb/K00T8uLQd/5llFY=
+
+Name: icons/full/ctool16/CreateEAnnotation_details_EStringToStringMapE
+ ntry.gif
+SHA-256-Digest: h3dXDVZysMS7b4PRqX6YmCHCFZ5wRh4eESRcejYj5MI=
+
+Name: org/eclipse/emf/ecore/provider/ETypedElementItemProvider.class
+SHA-256-Digest: SRdHYW/iA50qQpWytxkX5J4xXq8TJwrxRas7IV3srtM=
+
+Name: icons/full/obj16/EOccurrenceN.gif
+SHA-256-Digest: 4RHxhPNVORp1camxm7TltOL/6VttWjCaB8RYhbHEGgU=
+
+Name: icons/full/ctool16/CreateEGenericType_eTypeArguments_EGenericTyp
+ e.gif
+SHA-256-Digest: UQczhSMeyDWdljq3Jbvb2homeu33iosL8H2lc2KB2yY=
+
+Name: org/eclipse/emf/ecore/provider/EAnnotationItemProvider$GroupProp
+ ertyDescriptor.class
+SHA-256-Digest: NaJh1GMj422+Qc892MCG43JlwHVap8oULVLBTuUG5Lw=
+
+Name: org/eclipse/emf/ecore/provider/annotation/ExtendedMetaDataAnnota
+ tionItemProviderAdapterFactory$ValuePropertyDescriptorDecorator$Value
+ ChangeCommand.class
+SHA-256-Digest: tbLJ3kJQMkLWCSz7dCsA0PivFacnnSnPBQ0Lhs11f6g=
+
+Name: icons/full/ctool16/CreateEDataType_eTypeArguments_EGenericType.g
+ if
+SHA-256-Digest: UQczhSMeyDWdljq3Jbvb2homeu33iosL8H2lc2KB2yY=
+
+Name: icons/full/obj16/EOccurrenceOneToUnspecified.gif
+SHA-256-Digest: EqFLOtloP4TZsgwMS2jdxp8d1qnO8cVqkvBFJaCoMpE=
+
+Name: org/eclipse/emf/ecore/provider/annotation/DateConversionDelegate
+ AnnotationItemProviderAdapterFactory$1.class
+SHA-256-Digest: UNfPhlr7J5eJLV361n/KDYRbDSZKQTKdU+zRXsp9iBo=
+
+Name: org/eclipse/emf/ecore/provider/EClassItemProvider$1.class
+SHA-256-Digest: COZ/WZJTyj0oQ/Mheuh08oBYuptpi/DvbkCj48Q5Uzc=
+
+Name: org/eclipse/emf/ecore/provider/EAnnotationItemProvider$GroupProp
+ ertyDescriptor$1.class
+SHA-256-Digest: qbzj+TN5Lk8pJXF60E5i834pJ6JpSh7b8Astk17opS4=
+
+Name: org/eclipse/emf/ecore/provider/EAttributeItemProvider.class
+SHA-256-Digest: z3CY48vw6ulEsLw3J+cQ3L4P1cs2hQGcRXIbpgUhNBk=
+
+Name: org/eclipse/emf/ecore/provider/EcoreItemProviderAdapterFactory.c
+ lass
+SHA-256-Digest: i1L2Rv7dM5ajn6HrZscN2wkKXl29O8LCYi5BSZCP94I=
+
+Name: org/eclipse/emf/ecore/provider/EGenericTypeItemProvider$1$1.clas
+ s
+SHA-256-Digest: XWigeaR3h+AtFg+59YcJA6oRzbSn7EKAXCG2q0WEEOo=
+
+Name: icons/full/ctool16/CreateEPackage_eClassifiers_EDataType.gif
+SHA-256-Digest: mOpENYW4umATGo2XfFGfPRRwewIjbd+8dvTKiI0NrRg=
+
+Name: org/eclipse/emf/ecore/provider/EStringToStringMapEntryItemProvid
+ er$2.class
+SHA-256-Digest: x4cYQbyv04EPKa34vjvPDUkvhZodh/+5uwFopvlKbCU=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EAnnotationItemProvide
+ rAdapterFactory$Factory.class
+SHA-256-Digest: 2B7ZzYuyrTKVZmSSvHxFOz4qJPI30bsrUP7+p6Hsw84=
+
+Name: icons/full/ctool16/CreateETypedElement_eGenericType_EGenericType
+ .gif
+SHA-256-Digest: 3naGPgtIOfj2+JTmKFEZkmwQ7T+Cp+4jPqZI76tHXcA=
+
+Name: about.properties
+SHA-256-Digest: Q2sRb7eNZ4iJJfVw3SOYcUdJSJOyBC06oV02vkmGSso=
+
+Name: org/eclipse/emf/ecore/provider/EcoreEditPlugin$Implementation.cl
+ ass
+SHA-256-Digest: zQBq86lnXKDbo6+aD5TD8eCYecc2Sv1kvKjhZxyNazo=
+
+Name: icons/full/obj16/EOccurrenceZeroToUnspecified.gif
+SHA-256-Digest: YjVJkDgOm1oqPWcnd2ZFH/ys5LVugEVwdtrBE7gEZRY=
+
+Name: icons/full/ctool16/CreateEClass_eOperations_EOperation.gif
+SHA-256-Digest: OagonMth2q9Qx1nlGHs6/BZWEYtfOFQi+cWN+CPU8Rg=
+
+Name: org/eclipse/emf/ecore/provider/EClassItemProvider.class
+SHA-256-Digest: ijQcyzywgqHxgiiPTX+QM994KFGiF/gjQv13XACoTt0=
+
+Name: org/eclipse/emf/ecore/provider/EClassItemProvider$2.class
+SHA-256-Digest: 17ENnTxpVitXaNmOUA3+eF3gSpDfG/64RdATd8qFOWc=
+
+Name: org/eclipse/emf/ecore/provider/annotation/ExtendedMetaDataAnnota
+ tionItemProviderAdapterFactory$1.class
+SHA-256-Digest: RBpsF7wW4XnKPlVfgJ0nvxIOSIAnWZR9+KQaVeWiWJg=
+
+Name: org/eclipse/emf/ecore/provider/ETypedElementItemProvider$2.class
+SHA-256-Digest: jI7Ym2LJHdnXz/eXF8GePnSRIopWtjcOBpSPxliJ1/Q=
+
+Name: icons/full/ctool16/CreateEGenericType_eLowerBound_EGenericType.g
+ if
+SHA-256-Digest: ok270mppOSDrzHAm4UD9nozdV7n7jy2btFMjKaHo6LA=
+
+Name: icons/full/ctool16/CreateEOperation_eGenericExceptions_EGenericT
+ ype.gif
+SHA-256-Digest: aWSmcZWkjI5ENRJWe1KnijHTdKbTpqHtrQ2yGKsuGS0=
+
+Name: org/eclipse/emf/ecore/provider/EStringToStringMapEntryItemProvid
+ er$ValueHandlingPropertyDescriptor.class
+SHA-256-Digest: KKScYOO97rnbJAYMltHtnh/uuVx00lXT+Rym9/Q2dmA=
+
+Name: org/eclipse/emf/ecore/provider/ENamedElementItemProvider.class
+SHA-256-Digest: ZkmDuYhh6kmRyXEV/vbelen+PkEQ1D46Jdfd2cAtx+w=
+
+Name: org/eclipse/emf/ecore/provider/EFactoryItemProvider.class
+SHA-256-Digest: z7ONUKwPeq3tC4XLmI5r6YNzIrH25MvXEFLXhMG/f+Q=
+
+Name: icons/full/obj16/EGenericSuperType.gif
+SHA-256-Digest: eL1XVbNemYzLBsZDcCgpI7XqiP1FON5hSHVni/B0jdU=
+
+Name: icons/full/obj16/EObject.gif
+SHA-256-Digest: /28m18nAcIlhJwuhMKGZXD7xdiWZiM4efxsLypl1/m8=
+
+Name: icons/full/ctool16/CreateEClassifier_eTypeParameters_ETypeParame
+ ter.gif
+SHA-256-Digest: C0oeTW9XN3YGdQvGVx2xqs3iBuZ6IcG8WaJMvsl0QFs=
+
+Name: plugin.properties
+SHA-256-Digest: M2/+KmPvhfhw6ELKvj9CPtsEGHCHRDzd+uL99KahKKA=
+
+Name: org/eclipse/emf/ecore/provider/EcoreEditPlugin$Implementation$Ac
+ tivator.class
+SHA-256-Digest: ehJLVYgetxn3EzbVv17Ih4t4/vnP6YPrKfDRs65zLZg=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EAnnotationItemProvide
+ rAdapterFactory$ModeledItemPropertyDescriptorDecorator.class
+SHA-256-Digest: 5H/NOcFfQwF7iWa3JdO9YiMB8VhLIPKW18+XGFH5WM4=
+
+Name: org/eclipse/emf/ecore/provider/EAnnotationItemProvider$SourcePro
+ pertyDescriptor.class
+SHA-256-Digest: /jGxPYR3YOxuFAhfHP1EO9vAzBc/JuSiIC2ERikzv4w=
+
+Name: icons/full/obj16/EOccurrenceOne.gif
+SHA-256-Digest: eq1mIcpWNBqhEH3LqLnKqDqEIJivgw8xHoDOZxExY5Y=
+
+Name: org/eclipse/emf/ecore/provider/EReferenceItemProvider$3.class
+SHA-256-Digest: Tfea0jOUkNUcIjaY39qSOCiuQ/Nh457vsH0aRzmkDdY=
+
+Name: icons/full/ctool16/CreateEModelElement_eAnnotations_EAnnotation.
+ gif
+SHA-256-Digest: hFx+kkfuoMT12BjmrG65JQXFlneuJqW2XUt5vKESS3c=
+
+Name: icons/full/obj16/EOccurrenceZeroToOne.gif
+SHA-256-Digest: gLshLEFtUZkBVHOLpj3Mz7AOTtsxRDBBiJIhy0ajSNM=
+
+Name: org/eclipse/emf/ecore/provider/EModelElementItemProvider.class
+SHA-256-Digest: 3t3AUryMKc0BsmWkQQEg+G5oiGXAWcClsn9n/fOT6lw=
+
+Name: icons/full/obj16/EAttribute.gif
+SHA-256-Digest: hH6L05L4FiNfGATQjiWav027NgtjTeiw0eyM5Eoy3Kw=
+
+Name: META-INF/maven/org.eclipse.emf/org.eclipse.emf.ecore.edit/pom.xm
+ l
+SHA-256-Digest: M5oFO7Lb3Ow43ZpXeh3dHvqQqMJmLQYb9LihK7nNodE=
+
+Name: org/eclipse/emf/ecore/provider/EReferenceItemProvider.class
+SHA-256-Digest: GP0MHNVcqtHcZVQ9yBF/bi5mktu3p9ZO7Wj0o0YBNNI=
+
+Name: icons/full/obj16/EOccurrenceZero.gif
+SHA-256-Digest: Kh9uGVOhr2h3JMghHz7eXVEZyFNgnA8bmifLvZNzPfc=
+
+Name: icons/full/obj16/EReference.gif
+SHA-256-Digest: g+0S1AsaQ2uz7wGqcAkQB35DqvraWQtRXF50ih8mSqs=
+
+Name: icons/full/obj16/EOperation.gif
+SHA-256-Digest: tCKkdqsSCVIkSSgR6jnQykNrDjs6ek3AanUsGGBN288=
+
+Name: org/eclipse/emf/ecore/provider/EGenericTypeItemProvider$1.class
+SHA-256-Digest: 5N2Hhim2puS9TDfi+Z0nycL9ozKagUHE+0ASVlb37X4=
+
+Name: icons/full/obj16/EStringToStringMapEntry.gif
+SHA-256-Digest: 6tLpVgVT1XsUky918iF3KFubziPcAK2qEy/h8xv75Ow=
+
+Name: org/eclipse/emf/ecore/provider/ETypeParameterItemProvider.class
+SHA-256-Digest: FgZ9cZVjvyhJ4A9VoMTyAxdhTLiOG7vygS/vn66q4oQ=
+
+Name: org/eclipse/emf/ecore/provider/EOperationItemProvider.class
+SHA-256-Digest: Kmry2WI2TtnoSRL2C+GB6IqMPmeoibgYyZjJ7R4Odic=
+
+Name: org/eclipse/emf/ecore/provider/EClassifierItemProvider.class
+SHA-256-Digest: IhX4dIkphFiYYhx4FWa13NnIf337/ODsGfR8P1Ct4lI=
+
+Name: org/eclipse/emf/ecore/provider/package.html
+SHA-256-Digest: RP7tvdc5LY9QqrUpuiz24FsgTW+XSDd1XiFt7nkuDBU=
+
+Name: icons/full/obj16/EFactory.gif
+SHA-256-Digest: EhwcHHfnYdA+IiRQEUhKF/UQ7gwJlgNEZRVTDdm+sWI=
+
+Name: org/eclipse/emf/ecore/provider/EGenericTypeItemProvider.class
+SHA-256-Digest: 4i3lUbWjrLc4UAdHzJ49wQdvR487sXkjyVltI85kNjk=
+
+Name: org/eclipse/emf/ecore/provider/annotation/DateConversionDelegate
+ AnnotationItemProviderAdapterFactory.class
+SHA-256-Digest: FuUhr5LT+OtwKmzJYRsEkWw8MuPq6j6HVGTbfHass6M=
+
+Name: org/eclipse/emf/ecore/provider/EStructuralFeatureItemProvider$1.
+ class
+SHA-256-Digest: 1mlQxSsCzvCAaT+fn5AYUCPnTczc85HQ/DsYXZCqlp0=
+
+Name: org/eclipse/emf/ecore/provider/AnnotationItemProviderAdapterFact
+ oryRegistryReader$AnnotationItemProviderAdapterFactoryDescriptor.clas
+ s
+SHA-256-Digest: y2fio1PGZbFP86zlYrNXsl6p74ljoPCmEZQjniw4A1o=
+
+Name: about.html
+SHA-256-Digest: 94hJ6ZOHrZnO+XGpAhKNrMqA4v4X3qzwnfB0x9OL4eQ=
+
+Name: icons/full/obj16/EOccurrenceNToUnspecified.gif
+SHA-256-Digest: laC75mXlwPDKFiayyOI2b2NR5miw2hPgx16va543LUg=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EAnnotationItemProvide
+ rAdapterFactory$Reflective$NameHelper.class
+SHA-256-Digest: ECcGJO43DAKlkH5Ee2Gnbyb9CJqyU1VNixwIUVVfjYs=
+
+Name: icons/full/obj16/EParameter.gif
+SHA-256-Digest: YHFHgG27MYOBvsHAlOKNYFhUPt8T65UW+30+t5N4Qtg=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EAnnotationItemProvide
+ rAdapterFactory$DecategorizingItemPropertyDescritorDecorator.class
+SHA-256-Digest: InQBOz34gBqFYjYQBgY9QitZ5APhdxdHCCrXHf7hb94=
+
+Name: icons/full/ctool16/CreateEPackage_eSubpackages_EPackage.gif
+SHA-256-Digest: H0sN9FWRZ6mW/nSRW+GMQbaK5GFW3ppeb63cbLfCmqY=
+
+Name: org/eclipse/emf/ecore/provider/EGenericTypeItemProvider$2.class
+SHA-256-Digest: 21ZlWCi8/gx6PHB+IWvJyEu3IlnL79vIF10NH+UtTbY=
+
+Name: org/eclipse/emf/ecore/provider/EOperationItemProvider$1.class
+SHA-256-Digest: coADCXuvys1tHFqcH2JaYoCJPs2wU47j0AbBo70/Z0Q=
+
+Name: icons/full/obj16/EGenericWildcard.gif
+SHA-256-Digest: f7eaI1Mjsc7PXSrjSGIpiumzjsP10/YQM+zi7i36nWs=
+
+Name: icons/full/ctool16/CreateETypeParameter_eBounds_EGenericType.gif
+SHA-256-Digest: xbf0UOg7HsOkdFRFnRfuvu3ICs1Mzo4yjxYG+w5H7Ok=
+
+Name: org/eclipse/emf/ecore/provider/EcoreItemProviderAdapterFactory$1
+ .class
+SHA-256-Digest: Xk/J6wj/fsY38XZFC1t9RhQ5VaOWZl8ApAAh5EDrNb8=
+
+Name: org/eclipse/emf/ecore/provider/EDataTypeItemProvider.class
+SHA-256-Digest: MjBZN1EHTfxDaQ7uqbmfa6sNqT+BN6fu18+lpUrnM5E=
+
+Name: org/eclipse/emf/ecore/provider/EStringToStringMapEntryItemProvid
+ er.class
+SHA-256-Digest: NAj8jNPEjDryaOEPm8OVivphVQ+HGYP3SqmE0cDo1nA=
+
+Name: icons/full/obj16/EOccurrenceOneToUnbounded.gif
+SHA-256-Digest: WM6dEHRitkwn8wHZhp/TcG1LCnIIXXGCGV6voJMGlDc=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EAnnotationItemProvide
+ rAdapterFactory$1.class
+SHA-256-Digest: SY49Y0FuwpVEVXahvw64rlqxruYJKbt5L1dj96PR1ss=
+
+Name: icons/full/obj16/EPackage.gif
+SHA-256-Digest: Al+MwYpLAbEutip2PLYRqBqRBaWIIEQ1VQpd6X+SaHA=
+
+Name: org/eclipse/emf/ecore/provider/AnnotationItemProviderAdapterFact
+ oryRegistryReader.class
+SHA-256-Digest: dBVwMVOGM8ih12XAbqR83aKquh85hih/J2Vn18DhRCo=
+
+Name: icons/full/ctool16/CreateEPackage_eClassifiers_EClass.gif
+SHA-256-Digest: 4vOhceiyqEcNW/hqPt73Q/0OZCry+4+xzzeDNSOWymE=
+
+Name: META-INF/maven/org.eclipse.emf/org.eclipse.emf.ecore.edit/pom.pr
+ operties
+SHA-256-Digest: CDxXOqZEPW/+QuumIbWczvOEvI0lRW/K10+ZYH8F9Nw=
+
+Name: icons/full/obj16/EGenericTypeArgument.gif
+SHA-256-Digest: IPRLwqXYj+6PmxXt6dEPbn5PEYgQNf/Pzrh47+XX+AU=
+
+Name: icons/full/obj16/ETypeParameter.gif
+SHA-256-Digest: muu+Zkl/roBwcE44jhbO1hfSUKNRTtbmblzIhwhks1Q=
+
+Name: org/eclipse/emf/ecore/provider/annotation/EAnnotationItemProvide
+ rAdapterFactory$Group.class
+SHA-256-Digest: R14Wiq0cfGxen6VI8qMTvCkEhguihBr0Jkk22usmhVw=
+
