@@ -77,6 +77,21 @@ FROM table(dbms_xplan.display());
 SELECT plan_id, cpu_cost, io_cost, optimizer, operation
 FROM plan_table;
 
-CREATE OR REPLACE PROCEDURE ShowPlan IS
+-- view
+CREATE VIEW v_commune AS
+SELECT nom_com, latitude, longitude
+FROM imougenot.commune c
+INNER JOIN imougenot.departement d ON c.dep = d.dep
+INNER JOIN imougenot.region r ON d.reg = r.reg
+WHERE c.nom_com LIKE 'M%'
+AND r.nom_reg LIKE 'LANGUEDOC-ROUSSILLON';
 
-END;
+EXPLAIN PLAN SET statement_id = 'pe4' FOR
+SELECT *
+FROM v_commune;
+
+SELECT plan_table_output
+FROM table(dbms_xplan.display());
+
+SELECT plan_id, cpu_cost, io_cost, optimizer, operation
+FROM plan_table;
