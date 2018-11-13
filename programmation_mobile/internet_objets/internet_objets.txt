@@ -1,0 +1,8 @@
+
+
+12/11/2018
+
+Internet des objets :
+  - Objets electroniques (du quotidien) connectés entre eux
+  - Capteurs/Actionneurs (Mecanique ou non) (Exemple : valve)
+  - Echange de données (Acquisition/Envoi)
