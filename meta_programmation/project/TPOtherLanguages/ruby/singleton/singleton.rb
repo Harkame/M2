@@ -9,7 +9,6 @@ class Singleton
     end
   end
 
-  # Cette méthode est elle aussi statique / dans la méta-classe.
   def self.foo2
     puts "foo2"
   end
