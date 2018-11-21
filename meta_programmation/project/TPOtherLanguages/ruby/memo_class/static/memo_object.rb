@@ -1,6 +1,6 @@
 # Class who contains instances
 class MemoObject
-  @@instances = [] #List of instances
+  @@instances = [] #List of instances (static)
 
   # Default initializer
   # Store self into instances
