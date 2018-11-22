@@ -33,9 +33,8 @@ function syracuse($int) {
     if(!is_int($int))
         return "Not int";
 
-    $syracuseArray = [];
+    $syracuseArray = Array();
 
-    /*
     $syracuse = function(&$int)
     {
         if(($int % 2) === 0)
@@ -45,10 +44,15 @@ function syracuse($int) {
             $int *= 3;
             $int += 1;
         }
-    }
-    */
+    };
 
-    return $syracuseArray;
+    while($int !== 1)
+    {
+        $syracuse($int);
+        $syracuseArray[] = $int;
+    }
+
+    return implode(', ', $syracuseArray);
 }
 
 
