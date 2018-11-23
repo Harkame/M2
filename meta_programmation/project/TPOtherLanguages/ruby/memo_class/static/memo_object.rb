@@ -9,23 +9,25 @@ class MemoObject
   end
 
   ## Getter - instances
-  def self.all_instances
+  @ return [Array] All stored instances
+  def self.getInstances
     @@instances
   end
 end
 
-# An subclass of MemoObject
+# Class Person is an subclass of MemoObject
 class Person < MemoObject
 
-  # Initializer with parameters (name, age)
+  # Initializer with parameters
+  # @param [Object] name The name of the person
+  # @param [Object] age The age of the person
   def initialize name, age
-    super()
     @name = name
     @age = age
   end
 end
 
-# Test
+# Main
 
 # Creation of 3 persons
 p1 = Person.new "Titi", 12
@@ -33,4 +35,4 @@ p2 = Person.new "Toto", 78
 p3 = Person.new "Tata", 42
 
 # Show stored instances from MemoObject
-puts MemoObject.all_instances
+puts MemoObject.getInstances
