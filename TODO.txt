@@ -1,3 +1,5 @@
+https://blog.kulakowski.fr/public/
+
 Evolution-Restructuration
 	- TP1
 		- JRipples : all
