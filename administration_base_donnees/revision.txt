@@ -1,0 +1,147 @@
+1.1
+(Schema)
+
+1.2
+(Schema)
+
+1.3
+Vue statique
+Requête SQL réexecuté à chaque appel de la vue
++ : Permet de ne pas réecrire la requête
+- : La requête est reexecuté à chaque fois
+
+Vues structurelles
+
+Vue dynamique
+Le résultat de la requête SQL est déjà enregistré,
+appelé la vue renvoi ce résultat déjà enregistré
++ : Rapide car déjà calculé
+- : Peut ne pas être à jour
+
+Vues non structurelles (contenu)
+
+USER_TABLES : Mes tables
+DBA_USER_TABLES : Toute les tables
+ALL_TABLES : Toute les tables ou j'ai des droits
+(STATIQUE)
+
+v$... : dynamique
+
+Faire la difference ALL_ - USER_
+
+SELECT *
+FROM ALL_TABLES
+MINUS
+SELECT *
+FROM USER_TABLES;
+
+- Notion de session
+Connexion d'un utilisateur
+
+- Qui fait quoi
+- Identifiant, status, durée de vie
+
+select status, count(*) as connexions
+from V$SESSION
+group by status;
+
+Le nombre de personne en session par status (active ou inactive)
+
+SELECT instance_name
+FROM v$instance;
+
+-> master
+
+select instance_name, host_name, version, startup_time
+from v$instance;
+
+Nom de l'instance
+Nom de l'hôte
+Version de l'hôte
+Heure du dernier démarrage
+
+JOIN v$instance (instance_name) -> v$dabase (instance_name)
+- MASTER
+
+SELECT archiver
+FROM v$instance
+- STOPPED
+
+Permet de savoir squand on été validé les requêtes (transaction, commit)
+
+select addr, username, program
+from v$process
+where addr in (select paddr from v$bgprocess);
+
+Affiche le l'adresse, le nom, le program qui sont en processus en arrière plan.
+
+https://www.commentcamarche.net/contents/703-oracle-la-gestion-de-la-memoire
+
+La Shared Pool (ou zone partagée) contenant des informations pouvant être réutilisées par les différents utilisateurs, c'est-à-dire les requêtes SQL et programmes PL/SQL pouvant être partagés, le dictionnaire de données, les curseurs, ... D'une manière générale, cette zone sert à mémoriser, analyser et traiter les requêtes SQL provenant des divers utilisateurs.
+Le Db block buffer (Database Buffer Cache ou cache des blocs de données) est un espace mémoire contenant toutes les données transitant de ou vers la base de données : blocs de données, blocs d'index et blocs contenant les ROLLBACK SEGMENTS. Il s'agit donc d'un cache permettant d'accélérer l'accès à certaines données de la base.
+Le Redo Log buffer (ou cache Redo-log) contient les blocs de données (appelés Redo Entries) à modifier et les modifications à effectuer sur ces données, avant que l'ensemble de ces mises à jour de la base ne soient archivées dans les fichiers Redo-log
+
+7. v$lock intrus car rowcache (dictionarycache), librarycache(librarycache) et v$sqlarea sur sharedpool
+
+8. Taille du bloc de données : Select bytes from dba_segments;
+
+1.5 :
+
+1. Table space : blocs oragnisé au sein d'extent puis au sein de segment puis au sein de tablespace
+
+2. dbdatacache
+
+3. SELECT tablespace_name
+FROM USER_TABLES;
+
+SELECT segment_type, count(*)
+FROM dba_segments
+GROUP BY segment_type;
+
+SELECT file_name, tablespace_name
+FROM dba_data_files;
+
+6) dbms_rowid
+
+1.6
+
+set linesize 300
+
+SELECT
+Sql_FullText,(cpu_time/100000) "Cpu Time (s)"
+, (elapsed_time/1000000) "Elapsed time (s)"
+, fetches,buffer_gets,disk_reads,executions
+FROM v$sqlarea
+WHERE Parsing_Schema_Name = USER
+AND ROWNUM < 50
+ORDER BY 3 DESC;
+
+Renvoie les requêtes de l'utilisateur courant avec un nombre de résultat < 50
+
+
+1. Y
+2. Y
+3. N
+4. Y
+
+Avec un IOT, les 3 requetes qui utilisent l'index irons plus vite
+
+select id1, id2, request,
+decode(lmode,
+0,'None(0)',
+1,'Null(1)',
+2,'Row Share(2)',
+3,'Row Exclu(3)',
+4,'Share(4)',
+5,'Share Row Ex(5)',
+6,'Exclusive(6)') lmode, sid from v$lock;
+
+Affichage l'identifiant 1, l'identifiant2, la requête, remplace chaque numero de lmode par un string, le sid (identifiant de session) de v$lock
+
+4.
+4.1
+Le 3 est bon, les 2 autres font un :old.nom_com alors que c'est des triggers before update
+Le 3 est un after update
+
+5.
+4.
