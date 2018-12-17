@@ -1,0 +1,13 @@
+3 : Problematique : Extraire le meta-modele de projet, et obtenire des informations
+	sur ce même projet (example nombre de ligne de code du projet, nombre de classe, de methode par classe etc)
+Similaure a evolution et restructuration
+
+L'idée : On donne le code source a l'extracteur, qui contient un parseur et un meta model (qu'on presentera tt a l'heure)
+Sa donne un code analysé au format RSF (example herite : class a class b)
+
+Le but : Fouurnir une alternative a un autre model (Dagshtul), le probleme c'est que dahshull est trop generique
+
+D'apres les autres, il n'existe pas encore d'analyseur statique pour delphi.
+
+Compoaraison delphi cpp
+...etc
