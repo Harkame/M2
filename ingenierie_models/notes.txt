@@ -1,0 +1,28 @@
+DMM : Dagstuhl middle model
+
+Introduce Delphi meta-model + fact extractor
+
+Output : Rigi standard format
+
+Comparaison with C++ (2 + 3)
+
+6 Parts :
+2 : Overview
+	Show differences with C++
+
+3 : Delphi meta-model + fact extractor
+	3 meta-model
+		- Delphi Files
+		- Delphi Entities
+		- Delphi routine
+
+4 : Example of extractions
+	- Model Scene Editor
+	- SQL Parser
+
+5 : Present future work
+	- New output format
+	- Extend fact extractor to Delphi 7 et Delphi .NET
+
+6 : Conclusion
+	Use this tools to reverse engineering other projects and so continue to improve it
