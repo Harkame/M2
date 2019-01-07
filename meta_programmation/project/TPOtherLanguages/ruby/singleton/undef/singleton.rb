@@ -14,6 +14,8 @@ class Singleton
   end
 end
 
+singleton = Singleton.new
+
 puts Singleton
 
 puts Singleton.singleton_methods
