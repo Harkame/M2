@@ -22,7 +22,6 @@ class Person < MemoObject
   # @param [Object] name The name of the person
   # @param [Object] age The age of the person
   def initialize name, age
-    super()
     @name = name
     @age = age
   end
