@@ -1,21 +1,18 @@
 class Singleton
-  @@instance = Singleton.new
+  @@instance = Singleton.new #The singleton object
+
+  # Default contrcturo
+  def initialize
+  end
+
+  # Getter - instance
+  def self.instance
+    @@instance
+  end
 
   private_class_method :new #Hide method new, now we can't instanciate an Singleton
-
-  #Class method
-  def foo1
-    puts "foo1"
-  end
-
-  #Instance method
-  def self.foo2
-    puts "foo2"
-  end
 end
 
-puts Singleton
+singleton = Singleton.instance
 
-puts Singleton.singleton_methods
-
-puts Singleton.inspect
+other_singleton = Singleton.new # Error, private method new
