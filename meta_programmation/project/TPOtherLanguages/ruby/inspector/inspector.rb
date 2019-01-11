@@ -12,12 +12,12 @@ class Inspector
   # This method is called to inspect an object
   # It call inspect_instance
   # @param [Object] object_to_inspect The object to inspect
-  def inspect_object object_to_inspect
+  def inspect object_to_inspect
     inspect_instance object_to_inspect, object_to_inspect.class
   end
 
   # This method is call to inspect an instance + class
-  # It call all of the inspect methods
+  # It call all other inspection methods
   # @param [Object] object_to_inspect The instance to inspect
   # @param [Class] object_to_inspect_class The class of inspected object
   def inspect_instance object_to_inspect, object_to_inspect_class
@@ -124,8 +124,6 @@ class Person
   end
 end
 
-# Main
-
 # Creation of 2 persons
 person1 = Person.new "Tata", 29
 person2 = Person.new "Titi", 42
@@ -133,11 +131,11 @@ person2 = Person.new "Titi", 42
 inspector = Inspector.new
 
 # Inspection of person1
-inspector.inspect_object person1
+inspector.inspect person1
 
 # Some format
 puts "#{Util::get_line_separator}"
 puts "#{Util::get_line_separator}"
 puts "#{Util::get_line_separator}"
 
-inspector.inspect_object person2
+inspector.inspect person2

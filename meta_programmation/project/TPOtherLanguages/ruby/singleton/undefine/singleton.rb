@@ -1,5 +1,5 @@
 # Class Singleton, who cannot be instanciate (only 1 instance)
-# In this example, we gonna 'hide' method new to block instanciation
+# In this example, we gonna 'remove', undefine method 'new' to block instanciation
 class Singleton
   @@instance = Singleton.new #The singleton object
 
@@ -12,7 +12,9 @@ class Singleton
     @@instance
   end
 
-  private_class_method :new # Hide method 'new' outside this Class, now we can't instanciate an Singleton, its important to make this call after instanciation of attribut @@instance
+  class << self # Now, we work directly on class Singleton
+    undef_method :new # 'remove' method 'new', now we can't instanciate an Singleton, its important to make this call after instanciation of attribut @@instance
+  end
 end
 
 singleton = Singleton.instance
