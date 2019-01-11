@@ -1,3 +1,4 @@
+# Author : Louis Daviaud
 # Define simple Class to explain ruby's concept, singleton's method
 class MyObject
   # Default constructor

@@ -1,3 +1,4 @@
+# Author : Louis Daviaud
 # This module is used to format output
 module Util
   @@lineSeparator = "-----------------------"

@@ -1,3 +1,4 @@
+# Author : Louis Daviaud
 # Class who can remember her instances
 class MemoObject
   @@instances = [] #List of instances (static)

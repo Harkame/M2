@@ -1,3 +1,4 @@
+# Author : Louis Daviaud
 # Class Singleton, who cannot be instanciate (only 1 instance)
 # In this example, we gonna 'hide' method new to block instanciation
 class Singleton
